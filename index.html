@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المحترف للكهرباء والصيانة</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#f2f4f7;color:#172943;font-family:Arial,sans-serif}
+header{background:#142943;color:white;text-align:center;padding:28px 15px}
+.logo{font-size:38px;color:#f4c544}
+h1{font-size:23px;margin:10px}
+header p{color:#ddd}
+main{max-width:600px;margin:20px auto;padding:14px}
+.card{background:white;border-radius:16px;padding:20px;box-shadow:0 3px 14px #0001}
+.photo{background:#e9edf2;border:2px dashed #c5a13b;border-radius:12px;padding:28px;text-align:center;margin:15px 0;color:#526078}
+h2{color:#b58a19}
+label{display:block;margin:15px 0 7px;font-weight:bold}
+input,select,textarea{width:100%;padding:13px;border:1px solid #ccd3dc;border-radius:9px;font-size:16px}
+textarea{height:100px}
+button{width:100%;padding:15px;border:0;border-radius:10px;background:#d8ad36;color:#142943;font-size:18px;font-weight:bold;margin-top:20px}
+.note{font-size:13px;color:#687386;line-height:1.7}
+footer{text-align:center;padding:20px;color:#687386}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">⚡ 🔧</div>
+<h1>المحترف للكهرباء والصيانة</h1>
+<p>خبرة ومساعدة في أعطال الأجهزة المنزلية</p>
+</header>
+<main>
+<div class="card">
+<div class="photo">
+<strong>المحترف والمهندسة</strong>
+<p>مساحة مخصصة لصورتكما</p>
+</div>
+<h2>قدّم طلب صيانة</h2>
+<p>املأ البيانات وسنراجع طلبك.</p>
+<form id="repairForm">
+<label>نوع الجهاز</label>
+<select required>
+<option value="">اختر الجهاز</option>
+<option>ثلاجة</option>
+<option>غسالة</option>
+<option>تكييف</option>
+<option>تلفزيون</option>
+<option>فرن كهربائي</option>
+<option>سخان</option>
+<option>مروحة</option>
+<option>رسيفر ودش</option>
+<option>قلاية هوائية</option>
+<option>جهاز آخر</option>
+</select>
+<label>ماركة الجهاز والموديل</label>
+<input required placeholder="مثال: كريازي 14 قدم">
+<label>اشرح العطل</label>
+<textarea required placeholder="اكتب تفاصيل المشكلة..."></textarea>
+<label>الدولة</label>
+<input required placeholder="اكتب الدولة">
+<label>المحافظة أو المدينة</label>
+<input placeholder="اكتب المحافظة">
+<label>رقم واتساب (اختياري)</label>
+<input type="tel" placeholder="رقم التواصل">
+<label>رابط فيسبوك (اختياري)</label>
+<input type="url" placeholder="رابط حسابك">
+<label>صور أو فيديو للعطل</label>
+<input type="file" accept="image/*,video/*" multiple>
+<p class="note">هذه نسخة تجريبية، ولا يتم رفع الملفات إلى خادم حتى الآن.</p>
+<button type="submit">إرسال طلب الصيانة</button>
+<p id="message" class="note"></p>
+</form>
+</div>
+</main>
+<footer>المحترف للكهرباء والصيانة ©</footer>
+<script>
+document.getElementById('repairForm').addEventListener('submit',function(e){
+e.preventDefault();
+document.getElementById('message').textContent='هذه معاينة تجريبية فقط. لم يتم إرسال الطلب أو حفظه بعد.';
+});
+</script>
+</body>
+</html>
